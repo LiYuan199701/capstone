@@ -1,4 +1,4 @@
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/12wrkG2sgHtYkiBkqLktPYbKxKGf5USOy/view?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/12wrkG2sgHtYkiBkqLktPYbKxKGf5USOy)
 
 # capstone
 This repo is to store and track my capstone project progress, including files, results, codes, and plots.
