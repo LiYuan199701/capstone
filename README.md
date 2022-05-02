@@ -30,19 +30,23 @@ For more information on this dataset, please refer to (https://github.com/LiYuan
 ## Read in MedMNIST v2 data with PyTorch
 
 please run the following notebook which is also included in this repo:
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/13ME07TJxTA6MJHqjSWGwlGN598lUMYFv)
 
 ## Apply directly ClIP zero-shot classification models based on ImageNet to this binary classification
 
 please run the following notebook which is also included in this repo:
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/12wrkG2sgHtYkiBkqLktPYbKxKGf5USOy)
 
 ## Train a CNN model on previous output dataset with its predictions and compare results
 
 please run the following notebook which is also included in this repo:
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/17fD_l1iIU9-4LFRDcgk0iCRfV6EmucbX)
 
 ## Run 30 times for generalized tests
 
 please run the following notebook which is also included in this repo:
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/15tqWswpoKcWnHs2nP0maGy7AuIPDhEj1)
