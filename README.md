@@ -1,3 +1,5 @@
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/LiYuan199701/capstone/blob/main/03-CLIP-pred.ipynb)
+
 # capstone
 This repo is to store and track my capstone project progress, including files, results, codes, and plots.
 
