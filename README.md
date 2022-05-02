@@ -3,15 +3,33 @@ This repo is to store and track my capstone project progress, including files, r
 
 I use a prefix number to indicate the order of the code file and suffix name to indicate the functionality of a file.
 
-## To reproduce my codes, it is highly recommend that you run all python notebook in the Google Colab rather than local computers. 
+## To reproduce my codes, it is highly recommend that you run all python notebook in the Google Colab by the order prefixed on each notebook rather than local computers. 
 
-If you have to run them on your local computer, please follow up the below instructions and create a new virtual environment for this project and run them in it. **However, it is not gurantee to successfully run all of them due to different package versions and environment settings.**
+If you have to run them on your local computer, please follow up the below instructions and create a new virtual environment for this project and run them in it. **However, it is not gurantee to successfully run all of them due to different package versions and environment settings and it's tested on the macOS system.**
 
-**Create conda environment on your local system, this is only valid on mac system right now.**
+1. Clone this repo to your local computer
 
-    cd capstone
-    conda env create -f environment-mac.yml
-    conda activate capstone
+```bash
+git clone https://github.com/LiYuan199701/capstone.git
+```
+
+2. Change the directory into this repo
+
+```bash
+cd capstone
+```
+
+3. Create a conda virtual environment on your computer by using `environment-mac.yml` file
+
+```bash
+conda env create -f environment-mac.yml
+```
+
+4. Activate your new virtual environment
+
+```bash
+conda activate capstone
+```
 
 # Automatically label medical benchmark images without human manually operation
 
