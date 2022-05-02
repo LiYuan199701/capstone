@@ -1,15 +1,43 @@
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/13ME07TJxTA6MJHqjSWGwlGN598lUMYFv)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/12wrkG2sgHtYkiBkqLktPYbKxKGf5USOy)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/17fD_l1iIU9-4LFRDcgk0iCRfV6EmucbX)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/15tqWswpoKcWnHs2nP0maGy7AuIPDhEj1)
+
 # capstone
 This repo is to store and track my capstone project progress, including files, results, codes, and plots.
 
 I use a prefix number to indicate the order of the code file and suffix name to indicate the functionality of a file.
 
-## To reproduce my codes, you have to set up a virtual environment and run them in it.
+## To reproduce my codes, it is highly recommend that you run all python notebook in the Google Colab by the order prefixed on each notebook rather than local computers. 
 
-**Create conda environment on your local system, this is only valid on mac system right now.**
+If you have to run them on your local computer, please follow up the below instructions and create a new virtual environment for this project and run them in it. **However, it is not gurantee to successfully run all of them due to different package versions and environment settings and it's tested on the macOS system.**
 
-    cd capstone
-    conda env create -f environment-mac.yml
-    conda activate capstone
+1. Clone this repo to your local computer
+
+```bash
+git clone https://github.com/LiYuan199701/capstone.git
+```
+
+2. Change the directory into this repo
+
+```bash
+cd capstone
+```
+
+3. Create a conda virtual environment on your computer by using `environment-mac.yml` file
+
+```bash
+conda env create -f environment-mac.yml
+```
+
+4. Activate your new virtual environment
+
+```bash
+conda activate capstone
+```
 
 # Automatically label medical benchmark images without human manually operation
 
@@ -27,54 +55,24 @@ For more information on this dataset, please refer to (https://github.com/LiYuan
 
 ## Read in MedMNIST v2 data with PyTorch
 
-1.Load all packages
+please run the following notebook which is also included in this repo:
 
-    from tqdm import tqdm
-    import numpy as np
-    import torch
-    import torch.nn as nn
-    import torch.optim as optim
-    import torch.utils.data as data
-    import torchvision.transforms as transforms
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/13ME07TJxTA6MJHqjSWGwlGN598lUMYFv)
 
-    import medmnist
-    from medmnist import INFO, Evaluator
-    
-2.For example, load `BreastMNIST`
+## Apply directly ClIP zero-shot classification models based on ImageNet to this binary classification
 
-    data_flag = 'breastmnist'
-    download = True
+please run the following notebook which is also included in this repo:
 
-    NUM_EPOCHS = 3
-    BATCH_SIZE = 128
-    lr = 0.001
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/12wrkG2sgHtYkiBkqLktPYbKxKGf5USOy)
 
-    info = INFO[data_flag]
-    task = info['task']
-    n_channels = info['n_channels']
-    n_classes = len(info['label'])
+## Train a CNN model on previous output dataset with its predictions and compare results
 
-    DataClass = getattr(medmnist, info['python_class'])
-    
-3.Preprocess and encapsulate them into dataloader
+please run the following notebook which is also included in this repo:
 
-    # preprocessing
-    data_transform = transforms.Compose([
-        transforms.ToTensor(),
-        transforms.Normalize(mean=[.5], std=[.5])
-    ])
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/17fD_l1iIU9-4LFRDcgk0iCRfV6EmucbX)
 
-    # load the data
-    train_dataset = DataClass(split='train', transform=data_transform, download=download)
-    test_dataset = DataClass(split='test', transform=data_transform, download=download)
+## Run 30 times for generalized tests
 
-    pil_dataset = DataClass(split='train', download=download)
+please run the following notebook which is also included in this repo:
 
-    # encapsulate data into dataloader form
-    train_loader = data.DataLoader(dataset=train_dataset, batch_size=BATCH_SIZE, shuffle=True)
-    train_loader_at_eval = data.DataLoader(dataset=train_dataset, batch_size=2*BATCH_SIZE, shuffle=False)
-    test_loader = data.DataLoader(dataset=test_dataset, batch_size=2*BATCH_SIZE, shuffle=False)
-
-## Apply directly ClIP zero-shot classification models based on ImageNet to this dataset
-
-## Train CLIP zero-shot model on one MedMNIST dataset and apply to another similar dataset
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/15tqWswpoKcWnHs2nP0maGy7AuIPDhEj1)
