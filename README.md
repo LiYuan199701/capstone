@@ -11,7 +11,7 @@ This repo is to store and track my capstone project progress, including files, r
 
 I use a prefix number to indicate the order of the code file and suffix name to indicate the functionality of a file.
 
-## To reproduce my codes, it is highly recommend that you run all python notebook in the Google Colab by the order prefixed on each notebook rather than local computers. 
+## To reproduce my codes, it is highly recommend that you run all python notebooks in the Google Colab by the order prefixed on each notebook rather than local computers. 
 
 If you have to run them on your local computer, please follow up the below instructions and create a new virtual environment for this project and run them in it. **However, it is not gurantee to successfully run all of them due to different package versions and environment settings and it's tested on the macOS system.**
 
